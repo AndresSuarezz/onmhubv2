@@ -869,3 +869,51 @@ html[data-contrast="high"] .nav { background: var(--navy); }
 }
 .fab:hover { box-shadow: 0 6px 32px rgba(127,209,185,0.5); transform: translateY(-2px); }
 .fab:active { transform: translateY(0); }
+
+/* ============ MISSION IMAGES ============ */
+.mission-img-wrap {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+.mission-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform var(--t-med);
+}
+.mission-img-wrap:hover .mission-img {
+  transform: scale(1.03);
+}
+
+.mission-strip {
+  position: relative;
+  margin-top: 48px;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 16 / 6;
+}
+.mission-strip-img {
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+/* ============ JOIN BANNER ============ */
+.join-banner {
+  position: relative;
+  margin-top: 36px;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 21 / 8;
+}
+.join-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(15,26,46,0.75) 0%, rgba(15,26,46,0.45) 100%);
+  z-index: 1;
+}
+.join-banner-img {
+  object-fit: cover;
+  object-position: center 40%;
+}

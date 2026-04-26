@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const audiences = [
   {
     label: "Empresas",
@@ -35,6 +37,16 @@ export default function Join() {
         <p className="lede" style={{ marginTop: 28 }}>
           ¿Cómo puedes ser parte de la transformación?
         </p>
+
+        <div className="join-banner" aria-hidden="true">
+          <Image
+            src="/img/image-3-1024x666.jpg"
+            alt=""
+            fill
+            sizes="(min-width: 1280px) 1168px, (min-width: 920px) calc(100vw - 112px), calc(100vw - 40px)"
+            className="join-banner-img"
+          />
+        </div>
 
         <div className="join-grid">
           {audiences.map((a) => (

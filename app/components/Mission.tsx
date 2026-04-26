@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const items = [
   "Inclusión real, sin barreras.",
   "Transparencia y ética en la IA.",
@@ -29,6 +31,15 @@ export default function Mission() {
           </div>
 
           <div className="mission-quote">
+            <div className="mission-img-wrap">
+              <Image
+                src="/img/image-2-1024x683.jpg"
+                alt="Profesional en silla de ruedas trabajando activamente en una presentación"
+                width={1024}
+                height={683}
+                className="mission-img"
+              />
+            </div>
             <span className="mono" style={{ color: "var(--muted)" }}>
               ¿Cómo lo hacemos?
             </span>
@@ -52,6 +63,16 @@ export default function Mission() {
               ))}
             </ul>
           </div>
+        </div>
+
+        <div className="mission-strip">
+          <Image
+            src="/img/image1.jpg"
+            alt="Dos profesionales colaborando juntas, ejemplo de inclusión real en el entorno laboral"
+            fill
+            sizes="(min-width: 1280px) 1168px, (min-width: 920px) calc(100vw - 112px), calc(100vw - 40px)"
+            className="mission-strip-img"
+          />
         </div>
       </div>
     </section>
