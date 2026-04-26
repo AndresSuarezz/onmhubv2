@@ -34,10 +34,8 @@ export default function AsteriskMark({
   return (
     <svg
       viewBox="0 0 100 100"
-      width={size}
-      height={size}
       className={className}
-      style={{ display: "block", flexShrink: 0 }}
+      style={{ display: "block", flexShrink: 0, width: size, height: size }}
       aria-hidden="true"
     >
       {spokes}

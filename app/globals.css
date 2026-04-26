@@ -428,6 +428,8 @@ html[data-contrast="high"] .nav { background: var(--navy); }
   display: grid;
   place-items: center;
   animation: asterisk-spin 60s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 @keyframes asterisk-spin { to { transform: rotate(360deg); } }
 .asterisk-ring {
@@ -449,6 +451,7 @@ html[data-contrast="high"] .nav { background: var(--navy); }
   background: var(--cream-dim);
   border-radius: 999px;
   opacity: 0.6;
+  will-change: transform, opacity;
   animation: particle-drift 8s ease-in-out infinite;
 }
 @keyframes particle-drift {

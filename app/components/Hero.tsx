@@ -5,16 +5,17 @@ import AsteriskMark from "./AsteriskMark";
 
 export default function Hero() {
   const particles = useMemo(() => {
+    const r4 = (n: number) => Math.round(n * 10000) / 10000;
     const out = [];
     for (let i = 0; i < 18; i++) {
       const a = (i / 18) * Math.PI * 2;
       const r = 30 + (i % 4) * 8;
       out.push({
-        left: `${50 + Math.cos(a) * r}%`,
-        top: `${50 + Math.sin(a) * r}%`,
-        tx: `${Math.cos(a) * 12}px`,
-        ty: `${Math.sin(a) * 12}px`,
-        delay: `${(i * 0.43) % 8}s`,
+        left: `${r4(50 + Math.cos(a) * r)}%`,
+        top: `${r4(50 + Math.sin(a) * r)}%`,
+        tx: `${r4(Math.cos(a) * 12)}px`,
+        ty: `${r4(Math.sin(a) * 12)}px`,
+        delay: `${r4((i * 0.43) % 8)}s`,
       });
     }
     return out;
